@@ -7,7 +7,7 @@
 <script>
 // ═══════════════════════════════════════════════════════
 // COLE AQUI A URL DO SEU APPS SCRIPT (Passo 3 do guia)
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzo2CJY7OXHBzICZ3t094kw0rIauIfz2n6KjwKe_Iq8YOvT_ooMwy_ajeQMKHSHOiYj/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyddOZ4av1KR5ASAOnoEejH0uaM7hFweX9nislQ2wA/dev';
 // ═══════════════════════════════════════════════════════
 </script>
 <style>
@@ -321,7 +321,7 @@ let saveTimer=null;
 function tabKey(tab){return tab+"_"+curMes+curAno;}
 
 async function apiGet(tab){
-  if(SCRIPT_URL==='https://script.google.com/macros/s/AKfycbzo2CJY7OXHBzICZ3t094kw0rIauIfz2n6KjwKe_Iq8YOvT_ooMwy_ajeQMKHSHOiYj/exec') return [];
+  if(SCRIPT_URL==='https://script.google.com/macros/s/AKfycbyddOZ4av1KR5ASAOnoEejH0uaM7hFweX9nislQ2wA/dev') return [];
   try{
     const url=SCRIPT_URL+'?action=get&tab='+tabKey(tab);
     const r=await fetch(url);
@@ -331,7 +331,7 @@ async function apiGet(tab){
 }
 
 async function apiSet(tab,data){
-  if(SCRIPT_URL==='https://script.google.com/macros/s/AKfycbzo2CJY7OXHBzICZ3t094kw0rIauIfz2n6KjwKe_Iq8YOvT_ooMwy_ajeQMKHSHOiYj/exec') return;
+  if(SCRIPT_URL==='https://script.google.com/macros/s/AKfycbyddOZ4av1KR5ASAOnoEejH0uaM7hFweX9nislQ2wA/dev') return;
   try{
     await fetch(SCRIPT_URL+'?action=set&tab='+tabKey(tab),{
       method:'POST',
@@ -342,7 +342,7 @@ async function apiSet(tab,data){
 }
 
 async function apiLog(tab,who,acao,extra){
-  if(SCRIPT_URL==='Ahttps://script.google.com/macros/s/AKfycbzo2CJY7OXHBzICZ3t094kw0rIauIfz2n6KjwKe_Iq8YOvT_ooMwy_ajeQMKHSHOiYj/exec') return;
+  if(SCRIPT_URL==='https://script.google.com/macros/s/AKfycbyddOZ4av1KR5ASAOnoEejH0uaM7hFweX9nislQ2wA/dev') return;
   try{
     await fetch(SCRIPT_URL+'?action=log&tab='+tab,{
       method:'POST',
@@ -364,7 +364,7 @@ function ss(s,msg){
 async function loadAll(){
   document.getElementById("loading").style.display="flex";
   ss("ld","Carregando...");
-  if(SCRIPT_URL==='https://script.google.com/macros/s/AKfycbzo2CJY7OXHBzICZ3t094kw0rIauIfz2n6KjwKe_Iq8YOvT_ooMwy_ajeQMKHSHOiYj/exec'){
+  if(SCRIPT_URL==='https://script.google.com/macros/s/AKfycbyddOZ4av1KR5ASAOnoEejH0uaM7hFweX9nislQ2wA/dev'){
     document.getElementById("loading").style.display="none";
     document.getElementById("offline-warn").style.display="block";
     document.getElementById("offline-warn").textContent="⚠️ Configure a URL do Apps Script no arquivo HTML para ativar a sincronização com o Google Sheets.";
